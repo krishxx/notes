@@ -1,0 +1,46 @@
+OpenCV or Image Processing Discussion points:
+
+1. What is Computer Vision
+  It’s Subset of AI. Computer vision is an interdisciplinary scientific field that deals with
+  how computers can be made to gain high-level understanding from images or videos
+  
+2. What are all computer vision libraries?
+  OpenCV in C++,Python, Java
+  
+3. How many algorithms are there in OpenCV ?
+  Around 2500 optimized algorithms
+  
+4. What is CUDA ?
+  CUDA is a parallel computing platfomr and API interface model created by NVIDIA, which allows to use CUDA enabled GPU for general purpose
+
+5. What is openGL ? 
+  Open Graphics Library (OpenGL) is a cross-language, cross-platform application programming interface(API)
+  for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU),
+  to achieve hardware-accelerated rendering.
+  
+6. What are machine learning algorithms available in openCV ?
+   Normal Bayes Classifier, K-Nearest Neibhor, Support Vector Machines, Decision Trees, Boosting
+   Gradient Boosted Trees, Random Trees, Extremely randomized trees
+
+7. What is Image Stitching ?
+  Image stitching or photo stitching is the process of combining multiple photographic images
+  with overlapping fields of view to produce a segmented panorama or high-resolution image.
+  
+8. How to do image Stiching in openCV
+  Stitcher::Status status = stitcher->stitch(imgs, pano); input-imgs, output-pano
+   
+9. What is computational photography ?
+  Computational photography refers to digital image capture and processing techniques that use digital computation
+  instead of optical processes. Computational photography can improve the capabilities of a camera, or introduce features
+  that were not possible at all with film based photography, or reduce the cost or size of camera elements.
+  
+10. How to do computational photography in openCV?
+    a. Image Denoising (removing noise from image)
+    - cv2.fastNlMeansDenoising() - works with a single grayscale images
+    - cv2.fastNlMeansDenoisingColored() - works with a color image.
+    - cv2.fastNlMeansDenoisingMulti() - works with image sequence captured in short period of time (grayscale images)
+    - cv2.fastNlMeansDenoisingColoredMulti() - same as above, but for color images.
+    b. Image Inpainting (remove small noises, strokes etc in old photographs by a method called inpainting)
+      img = cv2.imread('messi_2.jpg')
+      mask = cv2.imread('mask2.png',0)
+      dst = cv2.inpaint(img,mask,3,cv2.INPAINT_TELEA)
