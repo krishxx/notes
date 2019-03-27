@@ -1,0 +1,31 @@
+1. How can you connect your webcam to opencv?
+CvCapture* mycapWebcam = cvCaptureFromCAM(0); 
+
+2. How can you do objection detection in opencv ?
+  using haar cascades
+  -Load the cascades
+  -Read the video stream
+  -Detect and Display
+  
+3. What are face recognition algorithms ?
+   Haar Cascades, Eigenfaces, Fisherfaces
+   
+4. Eigefaces?
+  Characteristic features are called eigenfaces in the facial recognition domain (or principal components generally).
+  They can be extracted out of original image data by means of a mathematical tool called Principal Component Analysis (PCA).
+ 
+5. How a haar cascading filter works?
+  classifier (namely a cascade of boosted classifiers working with haar-like features) is trained with a few hundred
+  sample views of a particular object (i.e., a face or a car), called positive examples, that are scaled to the same
+  size (say, 20x20), and negative examples - arbitrary images of the same size.
+  
+6. How many types of image filters are there in openCV ?
+  - Averaging
+  - Gaussian Filtering
+  - Median Filtering
+  - Bilateral Filtering
+  
+7. Feature detection in opencv ?
+  Step 1: Detect the keypoints using SURF Detector
+  Step 2: Draw keypoints
+  step 3: Show detected (drawn) keypoints
